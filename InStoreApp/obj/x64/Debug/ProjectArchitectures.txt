@@ -1,1 +1,1 @@
-C:\Users\Andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\InStoreApp.csproj;x64
+C:\Users\Andre\Documents\Visual Studio 2015\Projects\InStoreApp\InStoreApp\InStoreApp.csproj;x64

@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>416595a1-c6aa-4349-8e27-2e5798cbeb0f</PackageIdentityName>
     <PackageIdentityPublisher>CN=Andre</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Andre\Documents\Visual Studio 2015\Projects\InStoreApp\InStoreApp\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -25,16 +25,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Andre\Documents\Visual Studio 2015\Projects\InStoreApp\InStoreApp\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-30T11:15:22.268</Modified>
+      <Modified>2018-05-04T13:48:01.734</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\bin\x64\Debug\InStoreApp.exe">
+    <AppxPackagedFile Include="C:\Users\Andre\Documents\Visual Studio 2015\Projects\InStoreApp\InStoreApp\bin\x64\Debug\InStoreApp.exe">
       <PackagePath>entrypoint\InStoreApp.exe</PackagePath>
-      <Modified>2018-04-30T11:15:21.205</Modified>
+      <Modified>2018-05-04T13:48:01.079</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Andre\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -452,45 +452,45 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-07-22T22:11:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Andre\Documents\Visual Studio 2015\Projects\InStoreApp\InStoreApp\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2018-04-13T17:01:59.880</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Andre\Documents\Visual Studio 2015\Projects\InStoreApp\InStoreApp\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2015-09-20T16:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Andre\Documents\Visual Studio 2015\Projects\InStoreApp\InStoreApp\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T16:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Andre\Documents\Visual Studio 2015\Projects\InStoreApp\InStoreApp\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T16:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Andre\Documents\Visual Studio 2015\Projects\InStoreApp\InStoreApp\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T16:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Andre\Documents\Visual Studio 2015\Projects\InStoreApp\InStoreApp\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T16:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Andre\Documents\Visual Studio 2015\Projects\InStoreApp\InStoreApp\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T16:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Andre\Documents\Visual Studio 2015\Projects\InStoreApp\InStoreApp\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T16:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\bin\x64\Debug\InStoreApp.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Andre\Documents\Visual Studio 2015\Projects\InStoreApp\InStoreApp\bin\x64\Debug\InStoreApp.xr.xml">
       <PackagePath>InStoreApp.xr.xml</PackagePath>
       <Modified>2018-04-30T11:15:20.899</Modified>
     </AppxPackagedFile>
@@ -498,14 +498,14 @@
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2018-04-13T16:27:33.096</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Andre\Documents\Visual Studio 2015\Projects\InStoreApp\InStoreApp\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-04-30T11:15:21.948</Modified>
+      <Modified>2018-05-04T13:46:48.792</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\bin\x64\Debug\Core\InStoreApp.exe">
+    <AppxPackagedFile Include="C:\Users\Andre\Documents\Visual Studio 2015\Projects\InStoreApp\InStoreApp\bin\x64\Debug\Core\InStoreApp.exe">
       <PackagePath>InStoreApp.exe</PackagePath>
-      <Modified>2018-04-30T11:15:22.261</Modified>
+      <Modified>2018-05-04T13:48:01.728</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

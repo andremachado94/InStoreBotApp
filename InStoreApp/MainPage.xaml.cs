@@ -45,7 +45,7 @@ namespace InStoreApp
         public MainPage()
         {
             this.InitializeComponent();
-           // stt = new SpeechToTextAPI(this.button_start, this.textBlock);
+            stt = new SpeechToTextAPI(this.button_start, this.textBlock);
         }
 
         /*
@@ -63,17 +63,17 @@ namespace InStoreApp
         */
         private async void Button_Start(object sender, RoutedEventArgs e)
         {
-           // stt.Record();
+            stt.Record();
         }
 
         private async void Button_Stop(object sender, RoutedEventArgs e)
         {
-          //  stt.StopRecording();
+            stt.StopRecording();
         }
 
         private async void Button_Play(object sender, RoutedEventArgs e)
         {
-          //  stt.Play();
+            stt.Play();
         }
     }
 }
