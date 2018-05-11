@@ -2,11 +2,12 @@
   "dependencies": {
     "Microsoft.Bot.Connector.DirectLine": "3.0.2",
     "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8",
+    "Microsoft.Rest.ClientRuntime": "2.3.11",
     "NAudio": "1.8.0",
     "Newtonsoft.Json": "11.0.2"
   },
   "frameworks": {
-    "uap10.0": {}
+    "uap10.0.10586": {}
   },
   "runtimes": {
     "win10-arm": {},

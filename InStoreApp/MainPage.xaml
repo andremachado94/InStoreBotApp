@@ -5,9 +5,11 @@
     xmlns:local="using:InStoreApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Height="700"
     mc:Ignorable="d">
 
+    <!--Height="1366" Width="768" -->
+
+    
     <Page.Resources>
         <Style TargetType="Button">
             <Setter Property="Margin" Value="10 0 0 0"/>
@@ -56,7 +58,7 @@
             <Button x:Name="button_start" Content="Start" Click="Button_Start"  />
             <Button x:Name="button_stop" Content="Stop" Click="Button_Stop" />
             <Button x:Name="button_play" Content="Play" Click="Button_Play"/>
-            <Button x:Name="button_call" Content="Chamar Funcionario" Width="200"/>
+            <Button x:Name="button_call" Content="Chamar Funcionario" Click="Button_Call" Width="200"/>
             <ComboBox x:Name="language" Height = "35" Width = "150"  Margin="10,0,0,0" VerticalAlignment="center">
                 <ComboBoxItem IsSelected = "True">
                     <StackPanel Orientation="Horizontal">

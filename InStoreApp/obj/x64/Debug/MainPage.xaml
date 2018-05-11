@@ -7,11 +7,89 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <!--Height="1366" Width="768" -->
+
+    
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10 0 0 0"/>
+            <Setter Property="Background" Value="#36769A"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Width" Value="90"/>
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <!--<Setter Property="FontSize" Value="14"/>-->
+        </Style>
+    </Page.Resources>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:ConnectionId='1' x:Name="button_start" Content="Start" HorizontalAlignment="Left" Margin="152,5,0,0" VerticalAlignment="Top"                     />
-        <Button x:ConnectionId='2' x:Name="button_stop" Content="Stop" HorizontalAlignment="Left" Margin="152,55,0,0" VerticalAlignment="Top"                    />
-        <Button x:ConnectionId='3' x:Name="button_play" Content="Play" HorizontalAlignment="Left" Margin="152,105,0,0" VerticalAlignment="Top"                    />
-        <TextBlock x:ConnectionId='4' x:Name="textBlock" Text="TextBlock" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="250"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel x:ConnectionId='1' x:Name = "TopPanel1"  Orientation = "Horizontal" Padding="10 5" Background="#8DBFDA" Grid.Row="0" >
+            <Image Width="100" Height="50" VerticalAlignment="center" Source="./Images/logo.png" Stretch="Uniform" />
+            <ComboBox x:ConnectionId='10' x:Name="language1" Height = "35" Width = "30"  Margin="20,0,0,0" VerticalAlignment="center">
+                <ComboBoxItem IsSelected = "True">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="20" Height="10" Source="./Images/pt.png" />
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="20" Height="10" Source="./Images/us.png" />
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="20" Height="10" Source="./Images/es.png" />
+                    </StackPanel>
+                </ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Background="#DCF1FF" Grid.Row="1" Grid.ColumnSpan="3" >
+            <Button x:ConnectionId='5' x:Name="button_start" Content="Start"                       />
+            <Button x:ConnectionId='6' x:Name="button_stop" Content="Stop"                     />
+            <Button x:ConnectionId='7' x:Name="button_play" Content="Play"                    />
+            <Button x:ConnectionId='8' x:Name="button_call" Content="Chamar Funcionario"                     Width="200"/>
+            <ComboBox x:ConnectionId='9' x:Name="language" Height = "35" Width = "150"  Margin="10,0,0,0" VerticalAlignment="center">
+                <ComboBoxItem IsSelected = "True">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="20" Height="10" Source="./Images/pt.png" />
+                        <TextBlock >  Português</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="20" Height="10" Source="./Images/us.png" />
+                        <TextBlock >  Inglês</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="20" Height="10" Source="./Images/es.png" />
+                        <TextBlock >  Espanhol</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+
+        <TextBlock x:ConnectionId='2' x:Name="textBlock" Text="TextBlock" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" />
+
+
+        <StackPanel x:ConnectionId='3' x:Name = "BottomPanel"  Padding = "10" Orientation = "Horizontal" Height="250" Background="#DCF1FF" Grid.Row="3" Grid.Column="0">
+            <Image Width="200" Height="200" VerticalAlignment="center" Source="./Images/technon.png" Stretch="Uniform" />
+            <TextBlock x:ConnectionId='4' x:Name="botAnswer" Text="Bot Answer " Margin="100 10" HorizontalAlignment="Right"  VerticalAlignment="center" Grid.Row="3"/>
+        </StackPanel>
+
     </Grid>
 </Page>
 
