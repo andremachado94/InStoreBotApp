@@ -110,6 +110,20 @@
     <None Include="InStoreApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\br.png" />
+    <Content Include="Images\call_employee.PNG" />
+    <Content Include="Images\d.png" />
+    <Content Include="Images\en.png" />
+    <Content Include="Images\es.png" />
+    <Content Include="Images\f.png" />
+    <Content Include="Images\i.png" />
+    <Content Include="Images\languages.PNG" />
+    <Content Include="Images\languages2.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\pt.png" />
+    <Content Include="Images\ro.png" />
+    <Content Include="Images\technon.png" />
+    <Content Include="Images\us.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -127,6 +141,14 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="inicialPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LanguagePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

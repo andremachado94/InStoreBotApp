@@ -1,1 +1,0 @@
-c:\users\andre\documents\visual studio 2015\Projects\InStoreApp\InStoreApp\InStoreApp.csproj;x86

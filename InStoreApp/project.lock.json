@@ -27789,6 +27789,7 @@
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
+    "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\Fabiola\\Documents\\GitProjects\\InStoreBotApp\\InStoreApp\\InStoreApp.csproj",
       "projectName": "InStoreApp",

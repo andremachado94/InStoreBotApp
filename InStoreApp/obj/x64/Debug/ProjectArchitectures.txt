@@ -1,1 +1,0 @@
-C:\Users\Fabiola\Documents\GitProjects\InStoreBotApp\InStoreApp\InStoreApp.csproj;x64
