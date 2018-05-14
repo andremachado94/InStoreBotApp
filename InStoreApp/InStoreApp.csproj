@@ -96,6 +96,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Authentication.cs" />
+    <Compile Include="FaceAPI.cs" />
     <Compile Include="SpeechToTextAPI.cs" />
     <Compile Include="TtsRecognitionSimpleResult.cs" />
     <Compile Include="MainPage.xaml.cs">
