@@ -39,13 +39,12 @@ namespace InStoreApp
     /// 
     public sealed partial class MainPage : Page
     {
-
-        private SpeechToTextAPI stt;
+        MainController mc;
 
         public MainPage()
         {
             this.InitializeComponent();
-            stt = new SpeechToTextAPI(this.button_start, this.textBlock);
+            mc = new MainController(this);
         }
 
         /*
@@ -63,17 +62,19 @@ namespace InStoreApp
         */
         private async void Button_Start(object sender, RoutedEventArgs e)
         {
-            stt.Record();
+            this.button_start.IsEnabled = false;
+            await mc.Start();
+            this.button_start.IsEnabled = true;
         }
 
         private async void Button_Stop(object sender, RoutedEventArgs e)
         {
-            stt.StopRecording();
+            mc.Stop();
+            this.button_start.IsEnabled = true;
         }
 
         private async void Button_Play(object sender, RoutedEventArgs e)
         {
-            stt.Play();
         }
 
         private void Button_Call(object sender, RoutedEventArgs e)

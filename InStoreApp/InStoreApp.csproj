@@ -97,7 +97,9 @@
     </Compile>
     <Compile Include="Authentication.cs" />
     <Compile Include="FaceAPI.cs" />
-    <Compile Include="SpeechToTextAPI.cs" />
+    <Compile Include="MainController.cs" />
+    <Compile Include="SOExtensions.cs" />
+    <Compile Include="SpeechToText.cs" />
     <Compile Include="TtsRecognitionSimpleResult.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
