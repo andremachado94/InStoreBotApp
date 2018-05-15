@@ -41,11 +41,14 @@ namespace InStoreApp
     {
 
         private SpeechToTextAPI stt;
+        private FaceAPI face;
 
         public MainPage()
         {
             this.InitializeComponent();
             stt = new SpeechToTextAPI(this.button_start, this.textBlock);
+            face = new FaceAPI();
+            Task.Run(face.capturePhoto);
         }
 
         /*
