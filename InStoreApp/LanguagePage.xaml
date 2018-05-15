@@ -1,24 +1,28 @@
 ﻿<Page
-    x:Class="InStoreApp.LanguangePage"
+    x:Class="InStoreApp.LanguagePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:$wizardcodebehindxmlns$"
+    xmlns:local="using:InStoreApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Height="850"  Width="700"
     mc:Ignorable="d">
+
 
     <Page.Resources>
         <Style  TargetType="Image">
-            <Setter Property="Width" Value="150"></Setter>
-            <Setter Property="Height" Value="150"></Setter>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="150"/>
         </Style>
+        <Style TargetType="HyperlinkButton">
+            <Setter Property="HorizontalAlignment"  Value="Center"/>
+            <Setter Property="VerticalAlignment"  Value="Center"/>
+        </Style>
+               
     </Page.Resources>
-    
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="White" Margin="50" >
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="80"/>
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
@@ -29,26 +33,32 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Border Grid.ColumnSpan="3" Grid.Row="0" BorderBrush="#00A0F0" BorderThickness="0 0 0 3" />
- 
-        <StackPanel x:Name = "logoPanel"  Orientation = "Horizontal" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left">
-            <Image Width="70" Height="70" Source="./Images/logo.png" Stretch="Uniform" />
-        </StackPanel>
-        <StackPanel x:Name = "buttonPanel"  Orientation = "Horizontal" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right">
-            <Image Width="70" Height="70" Source="./Images/call_employee.png" Stretch="Uniform" />
-            <Image Width="70" Height="70" Source="./Images/languages2.png" Stretch="Uniform" />
-        </StackPanel>
-
-        <Image Source="./Images/pt.png" Stretch="Uniform" Grid.Row="1" Grid.Column="0"/>
-        <Image Source="./Images/f.png" Stretch="Uniform" Grid.Row="1" Grid.Column="1"/>
-        <Image Source="./Images/en.png" Stretch="Uniform" Grid.Row="1" Grid.Column="2"/>
-        
-        <Image Source="./Images/br.png" Stretch="Uniform" Grid.Row="2" Grid.Column="0"/>
-        <Image Source="./Images/i.png" Stretch="Uniform" Grid.Row="2" Grid.Column="1"/>
-        <Image Source="./Images/ro.png" Stretch="Uniform" Grid.Row="2" Grid.Column="2"/>
-
-        <Image Source="./Images/d.png" Stretch="Uniform" Grid.Row="3" Grid.Column="0"/>
-        <Image Source="./Images/us.png" Stretch="Uniform" Grid.Row="3" Grid.Column="1"/>
-        <Image Source="./Images/pt.png" Stretch="Uniform" Grid.Row="3" Grid.Column="2"/>
+        <HyperlinkButton x:Name="pt_pt_Language" Grid.Row="0" Grid.Column="0" Click="Language_Click">
+            <Image Source="./Images/pt-pt.png" Stretch="Uniform" />
+        </HyperlinkButton>
+        <HyperlinkButton x:Name="fr_fr_Language" Grid.Row="0" Grid.Column="1" Click="Language_Click">
+            <Image Source="./Images/fr-fr.png" Stretch="Uniform" />
+        </HyperlinkButton>
+        <HyperlinkButton x:Name="en_uk_Language"  Grid.Row="0" Grid.Column="2" Click="Language_Click">
+            <Image Source="./Images/en-uk.png" Stretch="Uniform"/>
+        </HyperlinkButton>
+        <HyperlinkButton x:Name="de_de_Language" Grid.Row="1" Grid.Column="0" Click="Language_Click">
+            <Image Source="./Images/de-de.png" Stretch="Uniform" />
+        </HyperlinkButton>
+        <HyperlinkButton x:Name="en_us_Language" Grid.Row="1" Grid.Column="1" Click="Language_Click">
+            <Image Source="./Images/en-us.png" Stretch="Uniform" />
+        </HyperlinkButton>
+        <HyperlinkButton x:Name="ro_ro_Language" Grid.Row="1" Grid.Column="2" Click="Language_Click">
+            <Image Source="./Images/ro-ro.png" Stretch="Uniform" />
+        </HyperlinkButton>
+        <HyperlinkButton x:Name="pt_br_Language" Grid.Row="2" Grid.Column="0" Click="Language_Click">
+            <Image Source="./Images/pt-br.png" Stretch="Uniform"/>
+        </HyperlinkButton>
+        <HyperlinkButton x:Name="it_it_Language" Grid.Row="2" Grid.Column="1" Click="Language_Click">
+            <Image Source="./Images/it-it.png" Stretch="Uniform" />
+        </HyperlinkButton>
+        <HyperlinkButton Grid.Row="2" Grid.Column="2">
+            <Image Source="./Images/pt-pt.png" Stretch="Uniform" />
+        </HyperlinkButton>
     </Grid>
 </Page>

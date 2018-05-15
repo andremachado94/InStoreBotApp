@@ -27,6 +27,8 @@ using System.Threading;
 using System.Text;
 using System.Runtime.Serialization;
 using Windows.Data.Json;
+using Windows.UI.Xaml.Media.Imaging;
+using Windows.UI;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -41,10 +43,13 @@ namespace InStoreApp
     {
 
         private SpeechToTextAPI stt;
+        private BitmapImage languageIcon2 = new BitmapImage(new Uri("ms-appx:///Images/languages2.png"));
 
         public MainPage()
         {
             this.InitializeComponent();
+            myFrame.Navigate(typeof(InitialPage));
+            //myFrame.Navigate(typeof(ListProducts));
             stt = new SpeechToTextAPI(this.button_start, this.textBlock);
         }
 
@@ -64,6 +69,7 @@ namespace InStoreApp
         private async void Button_Start(object sender, RoutedEventArgs e)
         {
             stt.Record();
+            myFrame.Navigate(typeof(ChatPage));
         }
 
         private async void Button_Stop(object sender, RoutedEventArgs e)
@@ -78,7 +84,26 @@ namespace InStoreApp
 
         private void Button_Call(object sender, RoutedEventArgs e)
         {
-            this.botAnswer.Text = "O funcionário não deve demorar!";
+            myFrame.Navigate(typeof(ChatPage));
+
+            //Get botAnswer textBlock inside chatpage
+            Frame rootFrame = Window.Current.Content as Frame;
+            Page mainPage = rootFrame.Content as MainPage;
+            Frame frame = mainPage.FindName("myFrame") as Frame;
+            Page chatpage = frame.Content as ChatPage;
+            var botAnswer = chatpage.FindName("botAnswer") as TextBlock;
+            botAnswer.Text = "O funcionário não deve demorar!";
         }
+
+        private void Button_language(object sender, RoutedEventArgs e)
+        {
+            myFrame.Navigate(typeof(LanguagePage));
+            this.changeLanguage.Source = languageIcon2;
+
+            //string hex = "#00A1F1";
+
+            this.button_language.Background = new SolidColorBrush(Color.FromArgb(0, 161, 241, 221));
+        }
+        
     }
 }
