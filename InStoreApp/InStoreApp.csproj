@@ -112,6 +112,7 @@
     <Compile Include="ProductDetails.xaml.cs">
       <DependentUpon>ProductDetails.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FaceAPI.cs" />
     <Compile Include="SpeechToTextAPI.cs" />
     <Compile Include="TtsRecognitionSimpleResult.cs" />
     <Compile Include="MainPage.xaml.cs">
