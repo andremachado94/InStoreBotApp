@@ -74,14 +74,15 @@ namespace InStoreApp
 
                 if(counter * 250 >= 10000)
                 {
-                    hasRes = false;
+                    if(ttsResult.DisplayText.Equals("None"))
+                        hasRes = false;
                     break;
                 }
             }
 
             await StopRecording();
 
-            return hasRes? ttsResult : null;
+            return (hasRes && !ttsResult.DisplayText.Equals("None")) ? ttsResult : null;
         }
 
         private async Task StartRecording()
@@ -96,7 +97,7 @@ namespace InStoreApp
 
             _mediaCapture = new MediaCapture();
             await _mediaCapture.InitializeAsync(settings);
-            await _mediaCapture.StartRecordToStreamAsync(MediaEncodingProfile.CreateWav(AudioEncodingQuality.Medium), _memoryBuffer);
+            await _mediaCapture.StartRecordToStreamAsync(MediaEncodingProfile.CreateWav(AudioEncodingQuality.Auto), _memoryBuffer);
 
             IsRecording = true;
 
@@ -107,7 +108,7 @@ namespace InStoreApp
         {
             TimerState2 s = new TimerState2();
             TimerCallback timerDelegate = new TimerCallback(CheckStatus);
-            timer = new Timer(timerDelegate, s, 0, 3000);
+            timer = new Timer(timerDelegate, s, 0, 1500);
             s.tmr = timer;
 
 
@@ -227,7 +228,7 @@ namespace InStoreApp
                         try
                         {
 
-                            using (var response = await request.GetResponseAsync().WithTimeout(3000).ConfigureAwait(false))
+                            using (var response = await request.GetResponseAsync().WithTimeout(1000).ConfigureAwait(false))
                             {
                                 //Debug.WriteLine("Hello!");
 
@@ -262,7 +263,7 @@ namespace InStoreApp
 
                                         }
                                         ttsResult = result;
-                                        Debug.WriteLine("Result: " + result.DisplayText);
+                                        Debug.WriteLine("Response: " + result.DisplayText);
                                     }
                                 }
                                 else
