@@ -38,6 +38,12 @@
           "lib/netstandard1.3/Microsoft.Bot.Connector.DirectLine.dll": {}
         }
       },
+      "Microsoft.CognitiveServices.Speech/0.2.12733": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CognitiveServices.Speech.props": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2588,6 +2594,12 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.Bot.Connector.DirectLine.dll": {}
+        }
+      },
+      "Microsoft.CognitiveServices.Speech/0.2.12733": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CognitiveServices.Speech.props": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -5177,6 +5189,12 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.Bot.Connector.DirectLine.dll": {}
+        }
+      },
+      "Microsoft.CognitiveServices.Speech/0.2.12733": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CognitiveServices.Speech.props": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -7804,6 +7822,12 @@
           "lib/netstandard1.3/Microsoft.Bot.Connector.DirectLine.dll": {}
         }
       },
+      "Microsoft.CognitiveServices.Speech/0.2.12733": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CognitiveServices.Speech.props": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -10400,6 +10424,12 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.Bot.Connector.DirectLine.dll": {}
+        }
+      },
+      "Microsoft.CognitiveServices.Speech/0.2.12733": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CognitiveServices.Speech.props": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -13036,6 +13066,12 @@
           "lib/netstandard1.3/Microsoft.Bot.Connector.DirectLine.dll": {}
         }
       },
+      "Microsoft.CognitiveServices.Speech/0.2.12733": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CognitiveServices.Speech.props": {}
+        }
+      },
       "Microsoft.CSharp/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -15632,6 +15668,12 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.Bot.Connector.DirectLine.dll": {}
+        }
+      },
+      "Microsoft.CognitiveServices.Speech/0.2.12733": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CognitiveServices.Speech.props": {}
         }
       },
       "Microsoft.CSharp/4.3.0": {
@@ -18351,6 +18393,81 @@
         "lib/netstandard1.3/Microsoft.Bot.Connector.DirectLine.dll",
         "microsoft.bot.connector.directline.3.0.2.nupkg.sha512",
         "microsoft.bot.connector.directline.nuspec"
+      ]
+    },
+    "Microsoft.CognitiveServices.Speech/0.2.12733": {
+      "sha512": "djQD4glyBmpr81VbYUYoqSI9w8k/Qb0sLg/FKFCDYjzqd1q7aDqjT1bKrCbJ/rl96h2xPH0WTzUuZ7K+wjn71Q==",
+      "type": "package",
+      "path": "microsoft.cognitiveservices.speech/0.2.12733",
+      "files": [
+        ".signature.p7s",
+        "build/Microsoft.CognitiveServices.Speech.props",
+        "build/native/Microsoft.CognitiveServices.Speech.targets",
+        "build/native/Win32/Debug/Microsoft.CognitiveServices.Speech.core.dll",
+        "build/native/Win32/Debug/Microsoft.CognitiveServices.Speech.core.lib",
+        "build/native/Win32/Debug/Microsoft.CognitiveServices.Speech.csharp.bindings.dll",
+        "build/native/Win32/Release/Microsoft.CognitiveServices.Speech.core.dll",
+        "build/native/Win32/Release/Microsoft.CognitiveServices.Speech.core.lib",
+        "build/native/Win32/Release/Microsoft.CognitiveServices.Speech.csharp.bindings.dll",
+        "build/native/include/c_api/speechapi_c.h",
+        "build/native/include/c_api/speechapi_c_audioinputstream.h",
+        "build/native/include/c_api/speechapi_c_common.h",
+        "build/native/include/c_api/speechapi_c_error.h",
+        "build/native/include/c_api/speechapi_c_factory.h",
+        "build/native/include/c_api/speechapi_c_intent_recognizer.h",
+        "build/native/include/c_api/speechapi_c_intent_result.h",
+        "build/native/include/c_api/speechapi_c_intent_trigger.h",
+        "build/native/include/c_api/speechapi_c_keyword_recognition_model.h",
+        "build/native/include/c_api/speechapi_c_language_understanding_model.h",
+        "build/native/include/c_api/speechapi_c_property_names.h",
+        "build/native/include/c_api/speechapi_c_recognizer.h",
+        "build/native/include/c_api/speechapi_c_result.h",
+        "build/native/include/c_api/speechapi_c_session.h",
+        "build/native/include/c_api/speechapi_c_translation_recognizer.h",
+        "build/native/include/c_api/speechapi_c_translation_result.h",
+        "build/native/include/c_api/spxdebug.h",
+        "build/native/include/c_api/spxerror.h",
+        "build/native/include/cxx_api/speechapi_cxx.h",
+        "build/native/include/cxx_api/speechapi_cxx_audioinputstream.h",
+        "build/native/include/cxx_api/speechapi_cxx_common.h",
+        "build/native/include/cxx_api/speechapi_cxx_eventargs.h",
+        "build/native/include/cxx_api/speechapi_cxx_eventsignal.h",
+        "build/native/include/cxx_api/speechapi_cxx_factory.h",
+        "build/native/include/cxx_api/speechapi_cxx_factory_parameter.h",
+        "build/native/include/cxx_api/speechapi_cxx_intent_recognition_eventargs.h",
+        "build/native/include/cxx_api/speechapi_cxx_intent_recognition_result.h",
+        "build/native/include/cxx_api/speechapi_cxx_intent_recognizer.h",
+        "build/native/include/cxx_api/speechapi_cxx_intent_trigger.h",
+        "build/native/include/cxx_api/speechapi_cxx_keyword_recognition_model.h",
+        "build/native/include/cxx_api/speechapi_cxx_language_understanding_model.h",
+        "build/native/include/cxx_api/speechapi_cxx_property_names.h",
+        "build/native/include/cxx_api/speechapi_cxx_recognition_async_recognizer.h",
+        "build/native/include/cxx_api/speechapi_cxx_recognition_base_async_recognizer.h",
+        "build/native/include/cxx_api/speechapi_cxx_recognition_eventargs.h",
+        "build/native/include/cxx_api/speechapi_cxx_recognition_result.h",
+        "build/native/include/cxx_api/speechapi_cxx_recognizer.h",
+        "build/native/include/cxx_api/speechapi_cxx_recognizer_parameter_collection.h",
+        "build/native/include/cxx_api/speechapi_cxx_session.h",
+        "build/native/include/cxx_api/speechapi_cxx_session_eventargs.h",
+        "build/native/include/cxx_api/speechapi_cxx_session_parameter_collection.h",
+        "build/native/include/cxx_api/speechapi_cxx_speech_recognition_eventargs.h",
+        "build/native/include/cxx_api/speechapi_cxx_speech_recognition_result.h",
+        "build/native/include/cxx_api/speechapi_cxx_speech_recognizer.h",
+        "build/native/include/cxx_api/speechapi_cxx_translation_eventargs.h",
+        "build/native/include/cxx_api/speechapi_cxx_translation_recognizer.h",
+        "build/native/include/cxx_api/speechapi_cxx_translation_result.h",
+        "build/native/include/cxx_api/speechapi_cxx_value.h",
+        "build/native/x64/Debug/Microsoft.CognitiveServices.Speech.core.dll",
+        "build/native/x64/Debug/Microsoft.CognitiveServices.Speech.core.lib",
+        "build/native/x64/Debug/Microsoft.CognitiveServices.Speech.csharp.bindings.dll",
+        "build/native/x64/Release/Microsoft.CognitiveServices.Speech.core.dll",
+        "build/native/x64/Release/Microsoft.CognitiveServices.Speech.core.lib",
+        "build/native/x64/Release/Microsoft.CognitiveServices.Speech.csharp.bindings.dll",
+        "build/net45/Microsoft.CognitiveServices.Speech.targets",
+        "lib/net45/Microsoft.CognitiveServices.Speech.csharp.dll",
+        "lib/net45/Microsoft.CognitiveServices.Speech.csharp.xml",
+        "microsoft.cognitiveservices.speech.0.2.12733.nupkg.sha512",
+        "microsoft.cognitiveservices.speech.nuspec"
       ]
     },
     "Microsoft.CSharp/4.3.0": {
@@ -28365,31 +28482,38 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.Bot.Connector.DirectLine >= 3.0.2",
+      "Microsoft.CognitiveServices.Speech >= 0.2.12733",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.8",
       "Microsoft.ProjectOxford.Face >= 1.4.0",
       "Microsoft.Rest.ClientRuntime >= 2.3.11",
       "NAudio >= 1.8.0",
       "Newtonsoft.Json >= 11.0.2",
       "System.IO >= 4.3.0",
-      "System.Linq >= 4.3.0"
+      "System.Linq >= 4.3.0",
+      "System.Threading.Tasks >= 4.3.0"
     ],
     "UAP,Version=v10.0.10586": []
   },
   "packageFolders": {
-    "C:\\Users\\Andre\\.nuget\\packages\\": {}
+    "C:\\Users\\William\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Andre\\Documents\\GitHub\\InStoreBotApp\\InStoreApp\\InStoreApp.csproj",
+      "projectUniqueName": "C:\\Users\\William\\Documents\\InStoreBotApp\\InStoreApp\\InStoreApp.csproj",
       "projectName": "InStoreApp",
-      "projectPath": "C:\\Users\\Andre\\Documents\\GitHub\\InStoreBotApp\\InStoreApp\\InStoreApp.csproj",
-      "projectJsonPath": "C:\\Users\\Andre\\Documents\\GitHub\\InStoreBotApp\\InStoreApp\\project.json",
-      "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Andre\\Documents\\GitHub\\InStoreBotApp\\InStoreApp\\obj\\",
+      "projectPath": "C:\\Users\\William\\Documents\\InStoreBotApp\\InStoreApp\\InStoreApp.csproj",
+      "projectJsonPath": "C:\\Users\\William\\Documents\\InStoreBotApp\\InStoreApp\\project.json",
+      "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\William\\Documents\\InStoreBotApp\\InStoreApp\\obj\\",
       "projectStyle": "ProjectJson",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -28398,13 +28522,15 @@
     },
     "dependencies": {
       "Microsoft.Bot.Connector.DirectLine": "[3.0.2, )",
+      "Microsoft.CognitiveServices.Speech": "[0.2.12733, )",
       "Microsoft.NETCore.UniversalWindowsPlatform": "[6.0.8, )",
       "Microsoft.ProjectOxford.Face": "[1.4.0, )",
       "Microsoft.Rest.ClientRuntime": "[2.3.11, )",
       "NAudio": "[1.8.0, )",
       "Newtonsoft.Json": "[11.0.2, )",
       "System.IO": "[4.3.0, )",
-      "System.Linq": "[4.3.0, )"
+      "System.Linq": "[4.3.0, )",
+      "System.Threading.Tasks": "[4.3.0, )"
     },
     "frameworks": {
       "uap10.0.10586": {}

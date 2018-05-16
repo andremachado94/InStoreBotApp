@@ -1,13 +1,15 @@
 ﻿{
   "dependencies": {
     "Microsoft.Bot.Connector.DirectLine": "3.0.2",
+    "Microsoft.CognitiveServices.Speech": "0.2.12733",
     "Microsoft.NETCore.UniversalWindowsPlatform": "6.0.8",
     "Microsoft.ProjectOxford.Face": "1.4.0",
     "Microsoft.Rest.ClientRuntime": "2.3.11",
     "NAudio": "1.8.0",
     "Newtonsoft.Json": "11.0.2",
     "System.IO": "4.3.0",
-    "System.Linq": "4.3.0"
+    "System.Linq": "4.3.0",
+    "System.Threading.Tasks": "4.3.0"
   },
   "frameworks": {
     "uap10.0.10586": {}

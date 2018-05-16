@@ -80,6 +80,7 @@ namespace InStoreApp
         private void Button_Call(object sender, RoutedEventArgs e)
         {
             this.botAnswer.Text = "O funcionário não deve demorar!";
+            TextToSpeech.TTSbegin("O funcionário não deve demorar!");
         }
     }
 }
