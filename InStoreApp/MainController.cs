@@ -29,18 +29,21 @@ namespace InStoreApp
 
         private MainPage mainPage;
         private SpeechToText stt;
+        private BotConnector bot;
 
 
         public MainController(MainPage mainPage)
         {
             this.mainPage = mainPage;
             SetState(STATE_IDLE);
+            bot = new BotConnector();
         }
 
         public async Task Start()
         {
             GC.Collect();
             IsFaceDetected = true;
+            await bot.startConversation();
             await StartVoiceRec();
         }
 
@@ -52,7 +55,10 @@ namespace InStoreApp
                 Debug.WriteLine("Starting VoiceRec");
                 TtsRecognitionSimpleResult res = await VoiceRec();
                 if (res != null)
-                    Debug.WriteLine("Result: " + res.DisplayText + "\n");
+                {
+                    string response = await bot.sendBotMessage(res.DisplayText);
+                    Debug.WriteLine("STT result: " + res.DisplayText + "\n" + "Bot response: " + response + "\n");
+                }
 
             }
         }

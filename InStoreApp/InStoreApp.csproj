@@ -96,6 +96,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Authentication.cs" />
+    <Compile Include="BotConnector.cs" />
     <Compile Include="FaceAPI.cs" />
     <Compile Include="MainController.cs" />
     <Compile Include="SOExtensions.cs" />

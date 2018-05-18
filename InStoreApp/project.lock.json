@@ -28495,25 +28495,20 @@
     "UAP,Version=v10.0.10586": []
   },
   "packageFolders": {
-    "C:\\Users\\William\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
+    "C:\\Users\\Andre\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\William\\Documents\\InStoreBotApp\\InStoreApp\\InStoreApp.csproj",
+      "projectUniqueName": "C:\\Users\\Andre\\Documents\\GitHub\\InStoreBotApp\\InStoreApp\\InStoreApp.csproj",
       "projectName": "InStoreApp",
-      "projectPath": "C:\\Users\\William\\Documents\\InStoreBotApp\\InStoreApp\\InStoreApp.csproj",
-      "projectJsonPath": "C:\\Users\\William\\Documents\\InStoreBotApp\\InStoreApp\\project.json",
-      "packagesPath": "C:\\Users\\William\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\William\\Documents\\InStoreBotApp\\InStoreApp\\obj\\",
+      "projectPath": "C:\\Users\\Andre\\Documents\\GitHub\\InStoreBotApp\\InStoreApp\\InStoreApp.csproj",
+      "projectJsonPath": "C:\\Users\\Andre\\Documents\\GitHub\\InStoreBotApp\\InStoreApp\\project.json",
+      "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Andre\\Documents\\GitHub\\InStoreBotApp\\InStoreApp\\obj\\",
       "projectStyle": "ProjectJson",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\William\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
