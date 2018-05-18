@@ -97,6 +97,22 @@
     </Compile>
     <Compile Include="Authentication.cs" />
     <Compile Include="BotConnector.cs" />
+    <Compile Include="ChatPage.xaml.cs">
+      <DependentUpon>ChatPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InitialPage.xaml.cs">
+      <DependentUpon>InitialPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LanguagePage.xaml.cs">
+      <DependentUpon>LanguagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ListProducts.xaml.cs">
+      <DependentUpon>ListProducts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Book.cs" />
+    <Compile Include="ProductDetails.xaml.cs">
+      <DependentUpon>ProductDetails.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FaceAPI.cs" />
     <Compile Include="MainController.cs" />
     <Compile Include="SOExtensions.cs" />
@@ -115,20 +131,25 @@
     <None Include="InStoreApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Images\br.png" />
+    <Content Include="Images\arrowL.png" />
+    <Content Include="Images\arrowR.png" />
+    <Content Include="Images\balloon-speech.png" />
     <Content Include="Images\call_employee.PNG" />
-    <Content Include="Images\d.png" />
-    <Content Include="Images\en.png" />
-    <Content Include="Images\es.png" />
-    <Content Include="Images\f.png" />
-    <Content Include="Images\i.png" />
+    <Content Include="Images\de-de.png" />
+    <Content Include="Images\en-uk.png" />
+    <Content Include="Images\en-us.png" />
+    <Content Include="Images\fr-fr.png" />
+    <Content Include="Images\info.png" />
+    <Content Include="Images\it-it.png" />
     <Content Include="Images\languages.PNG" />
     <Content Include="Images\languages2.png" />
+    <Content Include="Images\localizacao.png" />
     <Content Include="Images\logo.png" />
-    <Content Include="Images\pt.png" />
-    <Content Include="Images\ro.png" />
+    <Content Include="Images\pt-br.png" />
+    <Content Include="Images\pt-pt.png" />
+    <Content Include="Images\ro-ro.png" />
     <Content Include="Images\technon.png" />
-    <Content Include="Images\us.png" />
+    <Content Include="Images\wishlist.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -143,15 +164,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="ChatPage.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="inicialPage.xaml">
+    <Page Include="InitialPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="LanguagePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListProducts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProductDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

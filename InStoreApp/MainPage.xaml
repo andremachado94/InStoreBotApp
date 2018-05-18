@@ -8,83 +8,48 @@
     Height="850"  Width="700"
     mc:Ignorable="d">
 
-    <!--Height="1366" Width="768" -->
-
-    
     <Page.Resources>
-        <Style TargetType="Button">
-            <Setter Property="Margin" Value="10 0 0 0"/>
-            <Setter Property="Background" Value="#36769A"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Width" Value="90"/>
-            <Setter Property="Height" Value="35"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-            <!--<Setter Property="FontSize" Value="14"/>-->
+        <Style  TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Segoe UI"></Setter>
         </Style>
     </Page.Resources>
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Grid Background="White">
         <Grid.RowDefinitions>
-             <RowDefinition Height="80"/>
-            <RowDefinition Height="70" />
+            <RowDefinition Height="85"/>
             <RowDefinition Height="*" />
-            <RowDefinition Height="250" />
+            <RowDefinition Height="70" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel x:Name = "logoPanel"  Orientation = "Horizontal" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left">
-            <Image Width="70" Height="70" Source="./Images/logo.png" Stretch="Uniform" />
+        <StackPanel x:Name = "logoPanel" Orientation = "Horizontal" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" Padding="15 0">
+            <HyperlinkButton x:Name="button_initial" Click="Button_Call" >
+                <Image Width="70" Height="70" Source="./Images/logo.png" Stretch="Uniform" />
+            </HyperlinkButton>
         </StackPanel>
-        <StackPanel x:Name = "buttonPanel"  Orientation = "Horizontal" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right">
-            <Image Width="70" Height="70" Source="./Images/call_employee.png" Stretch="Uniform" />
-            <Image Width="70" Height="70" Source="./Images/languages.png" Stretch="Uniform" />
+        <StackPanel x:Name = "buttonPanel"  Orientation = "Horizontal" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Right" >
+            <HyperlinkButton x:Name="button_call" Click="Button_Call" Padding="10 0">
+                <Image Width="70" Height="70" Source="./Images/call_employee.png" Stretch="Uniform" />
+            </HyperlinkButton>
+            <HyperlinkButton x:Name="button_language" Click="Button_language" Padding="10 0">
+                <Image x:Name="changeLanguage" Width="70" Height="70" Source="./Images/languages.png" Stretch="Uniform" />
+            </HyperlinkButton>
         </StackPanel>
 
-        <Border Grid.ColumnSpan="3" Grid.Row="0" BorderBrush="#00A0F0" BorderThickness="0 0 0 3" />
+        <Border Grid.ColumnSpan="3" Grid.Row="0" BorderBrush="#00A1F1" BorderThickness="0 0 0 3" />
 
-        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="3" >
+        <Frame x:Name="myFrame" Grid.Row="1" Grid.ColumnSpan="2"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2">
             <Button x:Name="button_start" Content="Start" Click="Button_Start"  />
             <Button x:Name="button_stop" Content="Stop" Click="Button_Stop" />
             <Button x:Name="button_play" Content="Play" Click="Button_Play"/>
-            <Button x:Name="button_call" Content="Chamar Funcionario" Click="Button_Call" Width="200"/>
+            <TextBlock x:Name="textBlock" Text="TextBlock" HorizontalAlignment="Right" VerticalAlignment="Center"  />
         </StackPanel>
-<!--
-        <StackPanel  Grid.Row="2" Grid.ColumnSpan="3">
-            <Border Margin="0">
-                <controls:Carousel x:Name="CarouselControl"
-                  InvertPositive="True"
-                  ItemDepth="300"
-                  ItemMargin="0"
-                  ItemRotationX="0"
-                  ItemRotationY="45"
-                  ItemRotationZ ="0"
-                  Orientation="Horizontal"
-                  SelectedIndex="0">
-                    <controls:Carousel.EasingFunction>
-                        <CubicEase EasingMode="EaseOut" />
-                    </controls:Carousel.EasingFunction>
-                    <controls:Carousel.ItemTemplate>
-                        <DataTemplate>
-                            <Image Width="200"
-                  Height="200"
-                  VerticalAlignment="Bottom"
-                  Source="{Binding Thumbnail}"
-                  Stretch="Uniform" />
-                        </DataTemplate>
-                    </controls:Carousel.ItemTemplate>
-                </controls:Carousel>
-            </Border>
-        </StackPanel> -->
-        <TextBlock x:Name="textBlock" Text="TextBlock" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.ColumnSpan="3" /> 
-    
-
-        <StackPanel x:Name = "BottomPanel"  Padding = "10" Orientation = "Horizontal" VerticalAlignment="Bottom"  Grid.Row="3" Grid.ColumnSpan="3">
-            <Image Width="200" Height="200" VerticalAlignment="center" Source="./Images/technon.png" Stretch="Uniform" />
-            <TextBlock x:Name="botAnswer" Text="Bot Answer " Margin="100 10" HorizontalAlignment="Right"  VerticalAlignment="center" Grid.Row="3"/>
-        </StackPanel>
-
+      
     </Grid>
 </Page>
