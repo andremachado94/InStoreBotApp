@@ -58,6 +58,7 @@ namespace InStoreApp
                 {
                     string response = await bot.sendBotMessage(res.DisplayText);
                     Debug.WriteLine("STT result: " + res.DisplayText + "\n" + "Bot response: " + response + "\n");
+                    await TextToSpeech.TTSbegin(response);
                 }
 
             }
