@@ -43,12 +43,12 @@
 
         <Frame x:Name="myFrame" MinHeight="600" MinWidth="700" Grid.Row="1" Grid.ColumnSpan="2"/>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2">
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.ColumnSpan="2" Margin="134,0,-134,625">
             <Button x:Name="button_start" Content="Start" Click="Button_Start"  />
             <Button x:Name="button_stop" Content="Stop" Click="Button_Stop" />
             <Button x:Name="button_play" Content="Play" Click="Button_Play"/>
             <TextBlock x:Name="textBlock" Text="TextBlock" HorizontalAlignment="Right" VerticalAlignment="Center"  />
         </StackPanel>
-      
+
     </Grid>
 </Page>
