@@ -1,4 +1,5 @@
-﻿using Microsoft.ProjectOxford.Face;
+﻿
+using Microsoft.ProjectOxford.Face;
 using Microsoft.ProjectOxford.Face.Contract;
 using Microsoft.ProjectOxford.Common.Contract;
 using System.Threading.Tasks;
@@ -17,33 +18,34 @@ namespace InStoreApp
 {
     class FaceAPI
     {
-        private MediaCapture mediaCapture;
         bool isPreviewing;
-        private static FaceServiceClient faceServiceClient = new FaceServiceClient("455142f3e9cc4acd8749ade9534d34b0", "https://northeurope.api.cognitive.microsoft.com/face/v1.0");
         private static string personGroupId = "myfriends";
+        FaceServiceClient faceServiceClient;
+        MediaCapture mediaCapture;
+
 
 
         public FaceAPI()
         {
+            faceServiceClient = new FaceServiceClient("455142f3e9cc4acd8749ade9534d34b0", "https://northeurope.api.cognitive.microsoft.com/face/v1.0");
+            mediaCapture = new MediaCapture();
+        }
 
+        public async Task start()
+        {
+            await mediaCapture.InitializeAsync();
 
         }
 
-        public async Task capturePhoto()
+        public async Task stop()
         {
-            if(mediaCapture == null)
-            {
-                mediaCapture = new MediaCapture();
-                await mediaCapture.InitializeAsync();
-                //mediaCapture.Failed += MediaCapture_Failed;
+            mediaCapture.Dispose();
+            mediaCapture = null;
+        }
 
-            }
-            // Prepare and capture photo
-            /*var lowLagCapture = await mediaCapture.PrepareLowLagPhotoCaptureAsync(ImageEncodingProperties.CreateUncompressed(MediaPixelFormat.Bgra8));
+        public async Task<string> capturePhoto()
+        {
 
-            var capturedPhoto = await lowLagCapture.CaptureAsync();
-            var bitmap = capturedPhoto.Frame.SoftwareBitmap;
-            */
             var stream = new InMemoryRandomAccessStream();
             await mediaCapture.CapturePhotoToStreamAsync(ImageEncodingProperties.CreateJpeg(), stream);
             stream.Seek(0);
@@ -51,13 +53,18 @@ namespace InStoreApp
             
             var faceIds = faces.Select(face => face.FaceId).ToArray();
 
+            if (faceIds.Length == 0) return null;
+
             var results = await faceServiceClient.IdentifyAsync(personGroupId, faceIds);
+
+
             foreach (var identifyResult in results)
             {
                 Debug.WriteLine("Result of face: {0}", identifyResult.FaceId);
                 if (identifyResult.Candidates.Length == 0)
                 {
                     Debug.WriteLine("No one identified");
+                    return "Teste";
                 }
                 else
                 {
@@ -65,9 +72,10 @@ namespace InStoreApp
                     var candidateId = identifyResult.Candidates[0].PersonId;
                     var person = await faceServiceClient.GetPersonAsync(personGroupId, candidateId);
                     Debug.WriteLine("Identified as {0}", person.Name);
+                    return person.Name;
                 }
             }
-            //await lowLagCapture.FinishAsync();
+            return null;
         }
     }
 }

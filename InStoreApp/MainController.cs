@@ -42,23 +42,34 @@ namespace InStoreApp
         public async Task Start()
         {
             GC.Collect();
-            IsFaceDetected = true;
             await bot.startConversation();
             await StartVoiceRec();
+        }
+
+        public void SetFaceDetected(bool val)
+        {
+            IsFaceDetected = val;
         }
 
         private async Task StartVoiceRec()
         {
             stt = new SpeechToText();
-            while (IsFaceDetected)
+            while (true)
             {
-                Debug.WriteLine("Starting VoiceRec");
-                TtsRecognitionSimpleResult res = await VoiceRec();
-                if (res != null)
+                if (IsFaceDetected)
                 {
-                    string response = await bot.sendBotMessage(res.DisplayText);
-                    Debug.WriteLine("STT result: " + res.DisplayText + "\n" + "Bot response: " + response + "\n");
-                    await TextToSpeech.TTSbegin(response);
+                    Debug.WriteLine("Starting VoiceRec");
+                    TtsRecognitionSimpleResult res = await VoiceRec();
+                    if (res != null)
+                    {
+                        string response = await bot.sendBotMessage(res.DisplayText);
+                        Debug.WriteLine("STT result: " + res.DisplayText + "\n" + "Bot response: " + response + "\n");
+                        await TextToSpeech.TTSbegin(response);
+                    }
+                }
+                else
+                {
+                    await Task.Delay(250);
                 }
 
             }

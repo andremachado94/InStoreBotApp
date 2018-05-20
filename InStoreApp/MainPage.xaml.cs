@@ -29,6 +29,7 @@ using System.Runtime.Serialization;
 using Windows.Data.Json;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI;
+using Windows.UI.Core;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -44,28 +45,25 @@ namespace InStoreApp
         MainController mc;
 
         private BitmapImage languageIcon2 = new BitmapImage(new Uri("ms-appx:///Images/languages2.png"));
+        private Timer timer;
+        private Boolean IsFaceDetected { get; set; }
+        private Boolean IsAppActive { get; set; }
+        private FaceAPI fc;
+
 
         public MainPage()
         {
             this.InitializeComponent();
             mc = new MainController(this);
             myFrame.Navigate(typeof(InitialPage));
+            
+            fc = new FaceAPI();
+            fc.start();
+            start_face_timer();
+            mc.Start();
             //myFrame.Navigate(typeof(ListProducts));
         }
-
-        /*
-        private async Task SaySomething(string s)
-        {
-             
-             MediaElement mediaElement = new MediaElement();
-             var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
-             Windows.Media.SpeechSynthesis.SpeechSynthesisStream stream = await synth.SynthesizeTextToStreamAsync(s);
-             mediaElement.SetSource(stream, stream.ContentType);
-             mediaElement.Play();
-            
-
-        }
-        */
+        
         private async void Button_Start(object sender, RoutedEventArgs e)
         {
             this.button_start.IsEnabled = false;
@@ -82,6 +80,8 @@ namespace InStoreApp
 
         private async void Button_Play(object sender, RoutedEventArgs e)
         {
+            string res = await fc.capturePhoto();
+
         }
 
         private void Button_Call(object sender, RoutedEventArgs e)
@@ -106,6 +106,67 @@ namespace InStoreApp
 
             this.button_language.Background = new SolidColorBrush(Color.FromArgb(0, 161, 241, 221));
         }
-        
+
+        private void start_face_timer()
+        {
+            TimerState2 s = new TimerState2();
+            TimerCallback timerDelegate = new TimerCallback(CheckCameraStatus);
+            timer = new Timer(timerDelegate, s, 10000, 2000);
+            s.tmr = timer;
+        }
+
+        private async void CheckCameraStatus(Object state)
+        {//do what you want here instead of what follows
+            TimerState2 s = (TimerState2)state;
+            s.counter++;
+            //Debug.WriteLine("Timer iteration: " + s.counter);
+
+            string res = await fc.capturePhoto();
+            IsFaceDetected = (res == null) ? false : true; 
+
+            if (IsAppActive)
+            {
+                if (!IsFaceDetected)
+                {
+                    //mc.Stop();
+                    IsAppActive = false;
+                    Debug.WriteLine("Stoping");
+                    mc.SetFaceDetected(false);
+
+                    await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                        () =>
+                        {
+                            // Your UI update code goes here!
+                            myFrame.Navigate(typeof(InitialPage));
+                        }
+                        );
+
+                }
+            }
+            else
+            {
+                if (IsFaceDetected)
+                {
+                    IsAppActive = true;
+
+                    //await mc.Start();
+                    //this.button_start.IsEnabled = true;
+                    await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                        () =>
+                        {
+                            // Your UI update code goes here!
+                            myFrame.Navigate(typeof(ChatPage));
+                        }
+                        );
+                   
+                    mc.SetFaceDetected(true);
+                    Debug.WriteLine("Starting");
+
+                }
+            }
+
+        }
+
+
     }
 }
