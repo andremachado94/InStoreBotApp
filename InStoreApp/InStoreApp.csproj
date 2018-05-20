@@ -138,6 +138,7 @@
     <Content Include="Images\de-de.png" />
     <Content Include="Images\en-uk.png" />
     <Content Include="Images\en-us.png" />
+    <Content Include="Images\es-es.png" />
     <Content Include="Images\fr-fr.png" />
     <Content Include="Images\info.png" />
     <Content Include="Images\it-it.png" />

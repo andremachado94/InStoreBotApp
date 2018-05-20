@@ -29,6 +29,7 @@ using System.Runtime.Serialization;
 using Windows.Data.Json;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI;
+using Windows.UI.ViewManagement;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -49,8 +50,10 @@ namespace InStoreApp
         {
             this.InitializeComponent();
             mc = new MainController(this);
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(700, 850));
+            ApplicationView.PreferredLaunchViewSize = new Size(700,850);
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             myFrame.Navigate(typeof(InitialPage));
-            //myFrame.Navigate(typeof(ListProducts));
         }
 
         /*
@@ -106,6 +109,8 @@ namespace InStoreApp
 
             this.button_language.Background = new SolidColorBrush(Color.FromArgb(0, 161, 241, 221));
         }
+
+
         
     }
 }

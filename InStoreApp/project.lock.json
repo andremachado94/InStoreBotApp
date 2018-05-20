@@ -28495,19 +28495,19 @@
     "UAP,Version=v10.0.10586": []
   },
   "packageFolders": {
-    "C:\\Users\\Andre\\.nuget\\packages\\": {}
+    "C:\\Users\\FabiolaW10\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Andre\\Documents\\GitHub\\InStoreBotApp\\InStoreApp\\InStoreApp.csproj",
+      "projectUniqueName": "C:\\Users\\FabiolaW10\\Documents\\gitProject\\InStoreBotApp\\InStoreApp\\InStoreApp.csproj",
       "projectName": "InStoreApp",
-      "projectPath": "C:\\Users\\Andre\\Documents\\GitHub\\InStoreBotApp\\InStoreApp\\InStoreApp.csproj",
-      "projectJsonPath": "C:\\Users\\Andre\\Documents\\GitHub\\InStoreBotApp\\InStoreApp\\project.json",
-      "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Andre\\Documents\\GitHub\\InStoreBotApp\\InStoreApp\\obj\\",
+      "projectPath": "C:\\Users\\FabiolaW10\\Documents\\gitProject\\InStoreBotApp\\InStoreApp\\InStoreApp.csproj",
+      "projectJsonPath": "C:\\Users\\FabiolaW10\\Documents\\gitProject\\InStoreBotApp\\InStoreApp\\project.json",
+      "packagesPath": "C:\\Users\\FabiolaW10\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\FabiolaW10\\Documents\\gitProject\\InStoreBotApp\\InStoreApp\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
-        "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\FabiolaW10\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "sources": {

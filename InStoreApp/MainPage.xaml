@@ -5,7 +5,6 @@
     xmlns:local="using:InStoreApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    Height="850"  Width="700"
     mc:Ignorable="d">
 
     <Page.Resources>
@@ -42,7 +41,7 @@
 
         <Border Grid.ColumnSpan="3" Grid.Row="0" BorderBrush="#00A1F1" BorderThickness="0 0 0 3" />
 
-        <Frame x:Name="myFrame" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Frame x:Name="myFrame" MinHeight="600" MinWidth="700" Grid.Row="1" Grid.ColumnSpan="2"/>
 
         <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2">
             <Button x:Name="button_start" Content="Start" Click="Button_Start"  />

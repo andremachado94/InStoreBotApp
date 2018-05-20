@@ -50,9 +50,11 @@ namespace InStoreApp
         Timer timer;
         Timer timer1;
 
+        private string language;
 
-        public SpeechToText()
+        public SpeechToText(string language)
         {
+            this.language = language;
             auth = new Authentication("a6881fd6f059434e8567557545d86c38");
             token = auth.GetAccessToken();
         }
@@ -172,7 +174,7 @@ namespace InStoreApp
 
                 //Debug.WriteLine("ServiceCaller - true");
 
-                string requestUri = "https://speech.platform.bing.com/speech/recognition/interactive/cognitiveservices/v1?language=pt-PT&format=simple";
+                string requestUri = "https://speech.platform.bing.com/speech/recognition/interactive/cognitiveservices/v1?language="+language+"&format=simple";
                 string host = @"speech.platform.bing.com";
                 string contentType = @"audio/wav; codec=""audio/pcm""; samplerate=16000";
 

@@ -31,9 +31,11 @@ namespace InStoreApp
         private SpeechToText stt;
         private BotConnector bot;
 
+        internal static string language;
 
         public MainController(MainPage mainPage)
         {
+            language = "pt-PT"; // by default
             this.mainPage = mainPage;
             SetState(STATE_IDLE);
             bot = new BotConnector();
@@ -49,7 +51,7 @@ namespace InStoreApp
 
         private async Task StartVoiceRec()
         {
-            stt = new SpeechToText();
+            stt = new SpeechToText(language);
             while (IsFaceDetected)
             {
                 Debug.WriteLine("Starting VoiceRec");

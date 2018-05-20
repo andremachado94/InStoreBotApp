@@ -33,32 +33,32 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <HyperlinkButton x:Name="pt_pt_Language" Grid.Row="0" Grid.Column="0" Click="Language_Click">
+        <HyperlinkButton x:Name="pt_PT" Tag="pt-PT" Grid.Row="0" Grid.Column="0" Click="Language_Click">
             <Image Source="./Images/pt-pt.png" Stretch="Uniform" />
         </HyperlinkButton>
-        <HyperlinkButton x:Name="fr_fr_Language" Grid.Row="0" Grid.Column="1" Click="Language_Click">
+        <HyperlinkButton x:Name="pt_BR" Tag="pt-BR"  Grid.Row="0" Grid.Column="1" Click="Language_Click">
+            <Image Source="./Images/pt-br.png" Stretch="Uniform" />
+        </HyperlinkButton>
+        <HyperlinkButton x:Name="en_US" Tag="en-US" Grid.Row="0" Grid.Column="2" Click="Language_Click">
+            <Image Source="./Images/en-us.png" Stretch="Uniform"/>
+        </HyperlinkButton>
+        <HyperlinkButton x:Name="en_UK" Tag="en-GB" Grid.Row="1" Grid.Column="0" Click="Language_Click">
+            <Image Source="./Images/en-uk.png" Stretch="Uniform" />
+        </HyperlinkButton>
+        <HyperlinkButton x:Name="es_ES" Tag="es-ES" Grid.Row="1" Grid.Column="1" Click="Language_Click">
+            <Image Source="./Images/es-es.png" Stretch="Uniform" />
+        </HyperlinkButton>
+        <HyperlinkButton x:Name="fr_FR" Tag="fr-FR" Grid.Row="1" Grid.Column="2" Click="Language_Click">
             <Image Source="./Images/fr-fr.png" Stretch="Uniform" />
         </HyperlinkButton>
-        <HyperlinkButton x:Name="en_uk_Language"  Grid.Row="0" Grid.Column="2" Click="Language_Click">
-            <Image Source="./Images/en-uk.png" Stretch="Uniform"/>
+        <HyperlinkButton x:Name="de_DE" Tag="de-DE" Grid.Row="2" Grid.Column="0" Click="Language_Click">
+            <Image Source="./Images/de-de.png" Stretch="Uniform"/>
         </HyperlinkButton>
-        <HyperlinkButton x:Name="de_de_Language" Grid.Row="1" Grid.Column="0" Click="Language_Click">
-            <Image Source="./Images/de-de.png" Stretch="Uniform" />
-        </HyperlinkButton>
-        <HyperlinkButton x:Name="en_us_Language" Grid.Row="1" Grid.Column="1" Click="Language_Click">
-            <Image Source="./Images/en-us.png" Stretch="Uniform" />
-        </HyperlinkButton>
-        <HyperlinkButton x:Name="ro_ro_Language" Grid.Row="1" Grid.Column="2" Click="Language_Click">
-            <Image Source="./Images/ro-ro.png" Stretch="Uniform" />
-        </HyperlinkButton>
-        <HyperlinkButton x:Name="pt_br_Language" Grid.Row="2" Grid.Column="0" Click="Language_Click">
-            <Image Source="./Images/pt-br.png" Stretch="Uniform"/>
-        </HyperlinkButton>
-        <HyperlinkButton x:Name="it_it_Language" Grid.Row="2" Grid.Column="1" Click="Language_Click">
+        <HyperlinkButton x:Name="it_IT" Tag="it-IT" Grid.Row="2" Grid.Column="1" Click="Language_Click">
             <Image Source="./Images/it-it.png" Stretch="Uniform" />
         </HyperlinkButton>
-        <HyperlinkButton Grid.Row="2" Grid.Column="2">
-            <Image Source="./Images/pt-pt.png" Stretch="Uniform" />
+        <HyperlinkButton x:Name="ro_RO" Tag="ro-RO" Grid.Row="2" Grid.Column="2" Click="Language_Click">
+            <Image Source="./Images/ro-ro.png" Stretch="Uniform" />
         </HyperlinkButton>
     </Grid>
 </Page>

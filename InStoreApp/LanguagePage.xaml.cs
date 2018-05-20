@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -34,18 +35,22 @@ namespace InStoreApp
 
         private void Language_Click(object sender, RoutedEventArgs e)
         {
-            String[] words = this.Name.Split('_');
-            SetLanguage(words[0]);
+            HyperlinkButton b = sender as HyperlinkButton;
+            string languageCode = b.Tag.ToString();
+            SetLanguage(languageCode);
+            Debug.WriteLine("----------------------> Language : "+ languageCode);
+            
         }
 
         private void SetLanguage(String l)
         {
-            //TODO
+            MainController.language = l;
+
             Frame rootFrame = Window.Current.Content as Frame;
             Page mainPage = rootFrame.Content as MainPage;
             var button = mainPage.FindName("changeLanguage") as Image;
             button.Source = languageIcon1;
-  
+            
             Frame.GoBack();
         }
     }
