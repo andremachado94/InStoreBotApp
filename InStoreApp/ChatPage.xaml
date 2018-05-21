@@ -8,22 +8,35 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.Resources>
+            <ImageBrush x:Key="img" ImageSource="./Images/balloon-speech.png"></ImageBrush>
+
+        </Grid.Resources>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="250" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
 
         <Frame x:Name="attachmentsFrame" Grid.Row="0" Grid.ColumnSpan="2"/>
 
-        <StackPanel x:Name = "BottomPanel"  Padding = "10" Orientation = "Horizontal" VerticalAlignment="Bottom"  Grid.Row="1" Grid.ColumnSpan="2">
+        <StackPanel x:Name = "BottomPanel"  Padding = "10" Orientation = "Horizontal" VerticalAlignment="Bottom"  Grid.Row="1" Grid.Column="0">
             <Image Width="200" Height="200" VerticalAlignment="center" Source="./Images/technon.png" Stretch="Uniform" />
-            <TextBlock x:Name="botAnswer" Text="Bot Answer " Margin="100 10" HorizontalAlignment="Right"  VerticalAlignment="center"/>
         </StackPanel>
-     
+        
+        <Border Background="{StaticResource img}" Grid.Row="1" Grid.Column="1" Margin="0 10 50 10">
+            <ScrollViewer  Padding="80 15 15 15" Margin="0 0 20 0"  VerticalAlignment="Center" MaxHeight="200"  
+              Width="Auto" 
+              HorizontalScrollBarVisibility="Disabled"
+              VerticalScrollBarVisibility="Auto">
+                <TextBlock x:Name="botAnswer" Text="bot Answer"
+                      TextWrapping="Wrap"  />
+            </ScrollViewer>
+        </Border>
     </Grid>
 </Page>

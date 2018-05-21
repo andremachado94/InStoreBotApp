@@ -86,7 +86,10 @@ namespace InStoreApp
             string res = await fc.capturePhoto();
 
         }
-
+        private void Button_Quit(object sender, RoutedEventArgs e)
+        {
+            myFrame.Navigate(typeof(InitialPage));
+        }
         private void Button_Call(object sender, RoutedEventArgs e)
         {
             myFrame.Navigate(typeof(ChatPage));
@@ -97,17 +100,38 @@ namespace InStoreApp
             Frame frame = mainPage.FindName("myFrame") as Frame;
             Page chatpage = frame.Content as ChatPage;
             var botAnswer = chatpage.FindName("botAnswer") as TextBlock;
-            botAnswer.Text = "O funcionário não deve demorar!";
+            botAnswer.Text = "O funcionário não deve demorar! \n" +
+                "O funcionário não deve demorar! \n" +
+                "O funcionário não deve demorar! \n" +
+                "O funcionário não deve demorar! \n" +
+                "O funcionário não deve demorar! \n" +
+                "O funcionário não deve demorar! \n" +
+                "O funcionário não deve demorar! \n" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!" +
+                "O funcionário não deve demorar!";
         }
-
+        
         private void Button_language(object sender, RoutedEventArgs e)
         {
             myFrame.Navigate(typeof(LanguagePage));
             this.changeLanguage.Source = languageIcon2;
-
-            //string hex = "#00A1F1";
-
-            this.button_language.Background = new SolidColorBrush(Color.FromArgb(0, 161, 241, 221));
         }
 
         private void start_face_timer()

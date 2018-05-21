@@ -8,27 +8,30 @@
     mc:Ignorable="d">
 
     <Page.Resources>
-        <Style  TargetType="HyperlinkButton">
-            <Setter Property="BorderBrush" Value="White"></Setter>
-            <Setter Property="BorderThickness" Value="4"></Setter>
-            <Setter Property="Margin" Value="5"></Setter>
-            <Setter Property="Padding" Value="15"></Setter>
-            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
-            <Setter Property="VerticalAlignment" Value="Center"></Setter>
-            <Setter Property="FontFamily" Value="Segoe UI"></Setter>
-            <Setter Property="FontSize" Value="40"></Setter>
-            <Setter Property="Foreground" Value="White"></Setter>
-            <Setter Property="Background" Value="#00A0F0"></Setter>
+        <Style  TargetType="TextBox">
+            <Setter Property="Padding" Value="0 10"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#00A0F0"/>
+            <Setter Property="BorderThickness" Value="0"/>
         </Style>
+        
     </Page.Resources>
 
     <Grid Background="#00A1F1">
         <!-- TODO ver s existe uma melhor forma -->
         <StackPanel  VerticalAlignment="center"  >
-            <Image Width="200" Height="250"  Source="./Images/technon.png" Stretch="Uniform" />
-            <HyperlinkButton x:Name="startConversation" Click="startConversation_Click">
-                <TextBlock Text="Iniciar conversa" />
-            </HyperlinkButton>
+            <Image Width="700" Height="400"  Source="./Images/bot-animation-blue.gif" Stretch="Uniform" />
+            <Border  Width="300" BorderThickness="3" BorderBrush="White">
+                <StackPanel Width="200">
+                    <TextBox Text="Bem vindo" IsReadOnly="True"/>
+                    <TextBox Text="Bienvenido" IsReadOnly="True"/>
+                    <TextBox Text="Welcome" IsReadOnly="True"/>
+                    <TextBox Text="Bienvenue" IsReadOnly="True"/>
+                </StackPanel>
+            </Border>
         </StackPanel>
     </Grid>
 

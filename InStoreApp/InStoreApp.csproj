@@ -134,6 +134,7 @@
     <Content Include="Images\arrowL.png" />
     <Content Include="Images\arrowR.png" />
     <Content Include="Images\balloon-speech.png" />
+    <Content Include="Images\bot-animation-blue.gif" />
     <Content Include="Images\call_employee.PNG" />
     <Content Include="Images\de-de.png" />
     <Content Include="Images\en-uk.png" />

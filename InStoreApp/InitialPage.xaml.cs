@@ -27,9 +27,5 @@ namespace InStoreApp
             this.InitializeComponent();
         }
 
-        private void startConversation_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(ChatPage));
-        }
     }
 }
