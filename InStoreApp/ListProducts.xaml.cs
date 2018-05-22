@@ -1,6 +1,7 @@
 ﻿using InStoreApp.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -23,24 +24,35 @@ namespace InStoreApp
     /// </summary>
     public sealed partial class ListProducts : Page
     {
-        private List<Book> Books; //TODO -- Delete (just for test)
-
+        private List<Product> Products; //TODO -- Delete (just for test)
 
         public ListProducts()
         {
             this.InitializeComponent();
-            Books = BookManager.GetBooks();
+            Products = new List<Product>(); // ProductManager.getProducts();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if (e.Parameter.GetType() == typeof(List<Product>))
+            {
+                Products = e.Parameter as List<Product>;
+            }
+
         }
 
         private void button_infoProduct_Click(object sender, RoutedEventArgs e)
         {
-            //TODO mostrar outra pagina com a informação do produto selecionado
-            Frame.Navigate(typeof(ProductDetails));
+            HyperlinkButton b = sender as HyperlinkButton;
+            Product p = b.Tag as Product;
+            Frame.Navigate(typeof(ProductDetails), p);
         }
 
         private void button_addWistList_Click(object sender, RoutedEventArgs e)
         {
-            SaySomnthing("Producto adicionado com sucesso a sua wishList");
+            HyperlinkButton b = sender as HyperlinkButton;
+            Product p = b.Tag as Product;
+            SaySomnthing("Producto " + p.Brand + " " + p.Model + " adicionado com sucesso a sua wishList");
         }
 
         private void button_ProductLocation_Click(object sender, RoutedEventArgs e)
@@ -57,5 +69,6 @@ namespace InStoreApp
             var botAnswer = chatpage.FindName("botAnswer") as TextBlock;
             botAnswer.Text = message;
         }
+
     }
 }

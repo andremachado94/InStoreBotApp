@@ -10,7 +10,7 @@
 
     
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="50 10">
-        <GridView ItemsSource="{x:Bind Books}"     
+        <GridView ItemsSource="{x:Bind Products }"     
           ScrollViewer.HorizontalScrollBarVisibility="Auto"
           ScrollViewer.HorizontalScrollMode="Auto"
           ScrollViewer.VerticalScrollBarVisibility="Disabled"
@@ -22,20 +22,20 @@
                 </ItemsPanelTemplate>
             </GridView.ItemsPanel>
             <GridView.ItemTemplate>
-                <DataTemplate x:DataType="data:Book">
+                <DataTemplate x:DataType="data:Product">
                     <StackPanel BorderBrush="LightGray"  BorderThickness="1"  Padding="5" >
-                        <Image Width="200" Height="150" HorizontalAlignment="Left" Source="{x:Bind CoverImage}"/>
+                        <Image Width="200" Height="150" HorizontalAlignment="Center" Source="{x:Bind Photo}"/>
                         <StackPanel Width="200" HorizontalAlignment="Center">
-                            <TextBlock FontSize="18" Text="{x:Bind Title}"/>
-                            <TextBlock FontSize="16" Text="999€" />
+                            <TextBlock FontSize="18" Text="{x:Bind Brand}"/>
+                            <TextBlock FontSize="16" Text="{x:Bind Price}" />
                         </StackPanel>
-                        
-                        <TextBlock FontSize="14" Width="200" TextWrapping="Wrap"  TextTrimming="CharacterEllipsis"  MaxLines="5"  Text="{x:Bind Author}"/>
+
+                        <TextBlock FontSize="14" Width="200" TextWrapping="Wrap"  TextTrimming="CharacterEllipsis"  MaxLines="5"  Text="{x:Bind Name}"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10 0 0">
-                            <HyperlinkButton x:Name="button_infoProduct" Width="60" Click="button_infoProduct_Click">
+                            <HyperlinkButton x:Name="button_infoProduct" Width="60" Click="button_infoProduct_Click" Tag="{Binding}">
                                 <Image Width="30" Height="30" Source="./Images/info.png" Stretch="Uniform" />
                             </HyperlinkButton>
-                            <HyperlinkButton x:Name="button_addWistList" Width="60" Click="button_addWistList_Click">
+                            <HyperlinkButton x:Name="button_addWistList" Width="60" Click="button_addWistList_Click" Tag="{Binding}">
                                 <Image Width="30" Height="30" Source="./Images/wishlist.png" Stretch="Uniform" />
                             </HyperlinkButton>
                             <HyperlinkButton x:Name="button_ProductLocation" Width="60" Click="button_ProductLocation_Click">

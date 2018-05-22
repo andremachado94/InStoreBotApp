@@ -1,5 +1,7 @@
-﻿using System;
+﻿using InStoreApp.Model;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,14 +24,29 @@ namespace InStoreApp
     /// </summary>
     public sealed partial class ProductDetails : Page
     {
+        private List<Product> myProduct;
+
         public ProductDetails()
         {
             this.InitializeComponent();
+            myProduct = new List<Product>();
+            
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            if(e.Parameter.GetType() == typeof(Product))
+            {
+                myProduct.Add(e.Parameter as Product);
+            }
+           
         }
 
         private void button_addWistList_Click(object sender, RoutedEventArgs e)
         {
-            SaySomnthing("Producto adicionado com sucesso a sua wishList");
+            HyperlinkButton b = sender as HyperlinkButton;
+            Product p = b.Tag as Product;
+            SaySomnthing("Producto " + p.Brand + " " + p.Model + " adicionado com sucesso a sua wishList");
         }
 
         private void button_ProductLocation_Click(object sender, RoutedEventArgs e)
@@ -47,6 +64,10 @@ namespace InStoreApp
             botAnswer.Text = message;
         }
 
+        private void goBack_listProduct_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.GoBack();
+        }
     }
 
 }
