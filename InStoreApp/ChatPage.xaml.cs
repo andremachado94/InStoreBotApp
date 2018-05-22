@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InStoreApp.Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace InStoreApp
         public ChatPage()
         {
             this.InitializeComponent();
-            attachmentsFrame.Navigate(typeof(ListProducts));
+            attachmentsFrame.Navigate(typeof(ListProducts), ProductManager.getProducts());
         }
     }
 }

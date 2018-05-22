@@ -10,8 +10,8 @@ namespace InStoreApp
 {
     public class BotConnector
     {
-        private static string directLineSecret = "MMfKoIJvtwE.cwA.qo0.rrFm3sLzYD3QgdSR6W_LC9ofqscazQqB2Xvg_sZd2ks";
-        private static string botId = "InStoreBotTest";
+        private static string directLineSecret = "3_2aT1ijBtM.cwA.DDw.SqBs2RHLim-Wo0ASWbpChRJ_wRvKcg9NcPZ2xAZ6I6c";
+        private static string botId = "SKB-LGP";
         private static string fromUser = "DirectLineSampleClientUser";
 
         /*

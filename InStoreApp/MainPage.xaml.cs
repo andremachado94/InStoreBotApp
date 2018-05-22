@@ -100,32 +100,7 @@ namespace InStoreApp
             Frame frame = mainPage.FindName("myFrame") as Frame;
             Page chatpage = frame.Content as ChatPage;
             var botAnswer = chatpage.FindName("botAnswer") as TextBlock;
-            botAnswer.Text = "O funcionário não deve demorar! \n" +
-                "O funcionário não deve demorar! \n" +
-                "O funcionário não deve demorar! \n" +
-                "O funcionário não deve demorar! \n" +
-                "O funcionário não deve demorar! \n" +
-                "O funcionário não deve demorar! \n" +
-                "O funcionário não deve demorar! \n" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!" +
-                "O funcionário não deve demorar!";
+            botAnswer.Text = "O funcionário não deve demorar! \n";
         }
         
         private void Button_language(object sender, RoutedEventArgs e)
